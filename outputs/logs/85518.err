@@ -1,0 +1,2 @@
+/var/lib/slurm/slurmd/job85518/slurm_script: line 12: /mnt/data-dionysus/beatriz/venvs/draft/bin/activate: No such file or directory
+/var/lib/slurm/slurmd/job85518/slurm_script: line 34: python: command not found

@@ -29,7 +29,6 @@ def evaluate_model_answers(input_path, output_path):
             continue
         file_path = os.path.join(input_path, file_name)
         content = load_jsonl(file_path)
-
         for line in content:
             type = line["Type"]
             target_answer = line["Answer"]
@@ -44,12 +43,11 @@ def evaluate_model_answers(input_path, output_path):
                 score = eval_matching_questions(target_answer, predicted_answer)
             line["Score"] = score
 
-            os.makedirs(output_path, exist_ok=True)
-            out_file = os.path.join(output_path, file_name)
-            with open(out_file, "w", encoding="utf-8") as fh:
-                for obj in content:
-                    fh.write(json.dumps(obj, ensure_ascii=False) + "\n")
-            print(f"Evaluated: {file_name}")
+        os.makedirs(output_path, exist_ok=True)
+        out_file = os.path.join(output_path, file_name)
+        with open(out_file, 'w', encoding='utf-8') as out:
+            json.dump(content, out, ensure_ascii=False, indent=4)
+        print(f"Evaluated: {file_name}")
 
 
 def compute_model_scores(input_path, output_path):
@@ -93,13 +91,6 @@ def compute_model_scores(input_path, output_path):
                 json.dump(stats, f, indent=2, ensure_ascii=False)
 
             print(f"Scores saved for: {file_name}")
-
-
-def get_field_group(field, fields_mapping):
-    for group, fields in fields_mapping.items():
-        if field in fields:
-            return group
-    return None   # or raise an error if preferred
 
 
 def eval_matching_questions(target_answer, predicted_answer):

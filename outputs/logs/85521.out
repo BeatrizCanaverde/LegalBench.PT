@@ -1,0 +1,6 @@
+model_path: meta-llama/Llama-3.1-8B-Instruct
+max_len: 1000
+temperature: 0.001
+out_path: outputs/meta-llama/Llama-3.1-8B-Instruct_85521.jsonl
+seed: 2025
+INFO 11-03 18:09:24 [__init__.py:216] Automatically detected platform cuda.

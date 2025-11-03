@@ -1,7 +1,6 @@
 import json
 import argparse
 import random
-from transformers import AutoTokenizer
 from vllm import LLM, SamplingParams
 from datasets import load_dataset
 from fields import fields
@@ -14,12 +13,12 @@ def main(args):
     # Load the dataset
     dataset = []
     for field in fields:
-        ds = load_dataset("BeatrizCanaverde/LegalBench.PT", subset=field.replace(" ", "_"), split="test")
+        ds = load_dataset("BeatrizCanaverde/LegalBench.PT", field.replace(" ", "_"), split="test")
         dataset.extend(ds)
 
     # Load the model and tokenizer
     model_path = args.model_path
-    llm = LLM(model=model_path, seed=args.seed, max_model_len=args.max_len)
+    llm = LLM(model=model_path, seed=args.seed, max_model_len=4096)
 
     messages = []
     for instance in dataset:
@@ -32,8 +31,8 @@ def main(args):
         out_txt = output.outputs[0].text
         dataset[i]["Prediction"] = out_txt
         
-    with open(args.output_path, 'w') as out:
-            out.write(json.dumps(dataset, ensure_ascii=False) + '\n')
+    with open(args.output_path, 'w', encoding='utf-8') as out:
+        json.dump(dataset, out, ensure_ascii=False, indent=4)
 
     print(f"Model outputs saved to: {args.output_path}")
 
