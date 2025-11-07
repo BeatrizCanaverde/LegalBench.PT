@@ -1,0 +1,128 @@
+{
+    "Direito Administrativo": {
+        "Weighted Average": 198.23909313725488,
+        "Total Questions": 231,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.8066993464052288,
+        "Matching Questions": 0.8376190476190476,
+        "Multiple Choice": 0.8510416666666666,
+        "Multiple Selection Questions": 0.7876984126984127,
+        "True/False": 0.9131652661064426,
+        "Score": 0.8581778923690687
+    },
+    "Case Analysis Questions": {
+        "Weighted Average": 42.81428571428572,
+        "Total Questions": 45,
+        "Score": 0.9514285714285715
+    },
+    "Public": {
+        "Weighted Average": 432.71714572192514,
+        "Total Questions": 519,
+        "Score": 0.8337517258611274
+    },
+    "LegalBench.PT": {
+        "Weighted Average": 1196.4140546476317,
+        "Total Questions": 1389,
+        "Score": 0.861349211409382
+    },
+    "Cloze Tasks": {
+        "Weighted Average": 256.4734360410831,
+        "Total Questions": 297,
+        "Score": 0.8635469226972495
+    },
+    "Matching Questions": {
+        "Weighted Average": 118.30555555555556,
+        "Total Questions": 130,
+        "Score": 0.910042735042735
+    },
+    "Multiple Choice": {
+        "Weighted Average": 282.78372711846976,
+        "Total Questions": 326,
+        "Score": 0.8674347457621772
+    },
+    "Multiple Selection Questions": {
+        "Weighted Average": 128.8373015873016,
+        "Total Questions": 147,
+        "Score": 0.8764442284850449
+    },
+    "True/False": {
+        "Weighted Average": 367.19974863093637,
+        "Total Questions": 444,
+        "Score": 0.8270264608804874
+    },
+    "Direito Comercial": {
+        "Weighted Average": 188.83365775135468,
+        "Total Questions": 230,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.8115384615384615,
+        "Matching Questions": 0.9484126984126985,
+        "Multiple Choice": 0.8321472645002057,
+        "Multiple Selection Questions": 0.868170426065163,
+        "True/False": 0.7438070404172099,
+        "Score": 0.8210159032667594
+    },
+    "Private": {
+        "Weighted Average": 408.8640612596487,
+        "Total Questions": 484,
+        "Score": 0.8447604571480345
+    },
+    "Direito Internacional Público": {
+        "Weighted Average": 203.6669660502541,
+        "Total Questions": 221,
+        "Case Analysis Questions": 0.8785714285714286,
+        "Cloze Tasks": 0.9541666666666666,
+        "Matching Questions": 1.0,
+        "Multiple Choice": 0.9026199494949495,
+        "Multiple Selection Questions": 0.9032258064516129,
+        "True/False": 0.9130434782608696,
+        "Score": 0.9215699821278466
+    },
+    "Public Int.": {
+        "Weighted Average": 203.6669660502541,
+        "Total Questions": 221,
+        "Score": 0.9215699821278466
+    },
+    "Direito Processual Civil": {
+        "Weighted Average": 234.47805258467025,
+        "Total Questions": 288,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.8198412698412699,
+        "Matching Questions": 0.8024140211640213,
+        "Multiple Choice": 0.8543942577030812,
+        "Multiple Selection Questions": 0.8710144927536233,
+        "True/False": 0.7670454545454546,
+        "Score": 0.8141599048078828
+    },
+    "Direito da Família": {
+        "Weighted Average": 220.03040350829397,
+        "Total Questions": 254,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.8647435897435899,
+        "Matching Questions": 0.9464285714285714,
+        "Multiple Choice": 0.8180618401206636,
+        "Multiple Selection Questions": 0.8654027042915933,
+        "True/False": 0.8595146871008941,
+        "Score": 0.8662614311350156
+    },
+    "Direito da UE e Comunitário": {
+        "Weighted Average": 151.1658816158042,
+        "Total Questions": 165,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.975,
+        "Matching Questions": 1.0,
+        "Multiple Choice": 1.0,
+        "Multiple Selection Questions": 0.9581780538302277,
+        "True/False": 0.7809597523219814,
+        "Score": 0.9161568582776013
+    },
+    "UE": {
+        "Weighted Average": 151.1658816158042,
+        "Total Questions": 165,
+        "Score": 0.9161568582776013
+    },
+    "Public-Private": {
+        "Weighted Average": 0.0,
+        "Total Questions": 0,
+        "Score": 0.0
+    }
+}

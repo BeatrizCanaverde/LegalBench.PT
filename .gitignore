@@ -203,5 +203,4 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Mine
-./outputs/
-./evals/
+./extra_to_ignore/

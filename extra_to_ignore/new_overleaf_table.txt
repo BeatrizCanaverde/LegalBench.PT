@@ -1,0 +1,50 @@
+\begin{table}[ht]
+\scriptsize
+%\footnotesize
+\centering
+\begin{tabular}{lcc}
+\toprule
+\textbf{Fields of Law} & \textbf{Exams} & \textbf{Benchmark} \\ 
+\midrule
+\textbf{Public} & 274 & 2115 \\ \midrule
+Environmental Law & 11 & 52 \\
+Administrative Law & 39 & 227\\
+Constitutional Law & 58 & 206 \\
+Energy Law & 12 & 21 \\
+Public Finance Law & 25 & 208 \\
+Financial Law & 1 & 16 \\
+Tax Law & 19 & 232 \\
+Criminal Law & 38 & 390 \\
+Administrative Procedure Law & 19 & 116 \\
+Civil Procedure Law & 20 & 272 \\
+Criminal Procedure Law & 20 & 274 \\
+Labor Procedure Law & 2 & 3 \\ 
+Urban Planning Law & 10 & 98 \\
+\midrule %\midrule
+\textbf{Private} & 252 & 2057 \\ \midrule
+Contract Law & 25 & 212 \\
+Family Law & 34 & 220 \\
+Law of Obligations & 17 & 218 \\
+Property Law & 34 & 502 \\
+Succession Law & 1 & 17 \\
+Commercial Law & 23 & 240 \\
+Banking Law & 2 & 30 \\
+Maritime Law & 7 & 8 \\
+Corporate Law & 12 & 154 \\
+Securities Law & 9 & 45 \\ 
+Transportation Law & 15 & 26 \\
+Aviation Law & 19 & 31 \\
+Insolvency Law & 4 & 37 \\
+Private International Law & 18 & 110 \\
+Labor Law & 32 & 207 \\
+\midrule %\midrule
+\textbf{Public-Private} (Competition Law) & 12 & 175 \\ \midrule
+\textbf{Public International} & 72 & 212 \\
+\midrule
+\textbf{EU and Community} & 28 & 164 \\
+\midrule %\midrule
+\textbf{Total} & 626 & 4723 \\ \bottomrule
+\end{tabular}
+\caption{\label{table:categories-questions-numbers}
+Distribution of distinct questions in the exams and the benchmark across fields of law.}
+\end{table}
