@@ -1,0 +1,6 @@
+datasets
+transformers
+vllm
+scikit-learn
+jsonargparse
+numpy

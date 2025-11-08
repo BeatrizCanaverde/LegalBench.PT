@@ -3,27 +3,32 @@ import ast
 import os
 import json
 from collections import defaultdict
-from fields import reverse_mapping
+from pathlib import Path
+import jsonargparse
+from sklearn.metrics import balanced_accuracy_score
+from fields import fields_mapping, reverse_mapping
 
 
 def load_jsonl(jsonl_path):
-    """Load a .jsonl file and return a list of parsed dicts."""
-    results = []
     with open(jsonl_path, "r", encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            obj = json.loads(line)
-        results.append(obj)
-    return results
-
+        content = fh.read().strip()
+        # Check if it's a JSON array (starts with '[')
+        if content.startswith('['):
+            # It's a JSON array, parse it directly
+            return json.loads(content)
+        else:
+            # It's proper JSONL format (one JSON object per line)
+            results = []
+            for line in content.split('\n'):
+                line = line.strip()
+                if not line:
+                    continue
+                obj = json.loads(line)
+                results.append(obj)
+            return results
+        
 
 def evaluate_model_answers(input_path, output_path):
-    """
-    Iterate over all .jsonl files in folder_path and return a dict mapping
-    filename -> list of parsed JSON objects (one per line).
-    """
     for file_name in os.listdir(input_path):
         if not file_name.lower().endswith(".jsonl"):
             continue
@@ -51,9 +56,7 @@ def evaluate_model_answers(input_path, output_path):
 
 
 def compute_model_scores(input_path, output_path):
-    """
-    Compute model scores for all evaluated answers and save the results.
-    """
+
     for file_name in os.listdir(input_path):
         if not file_name.lower().endswith(".jsonl"):
             continue
@@ -68,8 +71,9 @@ def compute_model_scores(input_path, output_path):
             subset = [f for f in content if f["Field of Law"] == field and f["Type"] == type]
 
             if type in ["Multiple Choice", "Cloze Tasks", "Case Analysis Questions", "True/False"]:
-                scores = [f["Score"] for f in subset]
-                avg_score = sum(scores) / len(scores) if scores else 0.0
+                target_answers = [f["Answer"] for f in subset]
+                predicted_answers = [process(f["Prediction"], type) for f in subset]
+                avg_score = balanced_accuracy_score(target_answers, predicted_answers)
 
             if type in ["Multiple Selection Questions", "Matching Questions"]:
                 scores = [f["Score"] for f in subset]
@@ -77,7 +81,7 @@ def compute_model_scores(input_path, output_path):
 
             group = reverse_mapping.get(field)
             num_questions = len(subset)
-            weighted_sum += avg_score * num_questions
+            weighted_sum = avg_score * num_questions
 
             stats[field][type] = avg_score
             stats[field]["Weighted Average"] += weighted_sum
@@ -86,18 +90,61 @@ def compute_model_scores(input_path, output_path):
             stats[type]["Total Questions"] += num_questions
             stats[group]["Weighted Average"] += weighted_sum
             stats[group]["Total Questions"] += num_questions
+            stats["LegalBench.PT"]["Weighted Average"] += weighted_sum
+            stats["LegalBench.PT"]["Total Questions"] += num_questions
 
-            with open(output_path, "w", encoding="utf-8") as f:
-                json.dump(stats, f, indent=2, ensure_ascii=False)
+        fields = [i[0] for i in pairs_fields_types]
+        types = [i[1] for i in pairs_fields_types]
+        
+        for field in set(fields):
+            stats[field]["Score"] = stats[field]["Weighted Average"] / stats[field]["Total Questions"] if stats[field]["Total Questions"] > 0 else 0.0
+        
+        for type in set(types):
+            stats[type]["Score"] = stats[type]["Weighted Average"] / stats[type]["Total Questions"] if stats[type]["Total Questions"] > 0 else 0.0
 
-            print(f"Scores saved for: {file_name}")
+        for group in fields_mapping.keys():
+            stats[group]["Score"] = stats[group]["Weighted Average"] / stats[group]["Total Questions"] if stats[group]["Total Questions"] > 0 else 0.0
+
+        stats["LegalBench.PT"]["Score"] = stats["LegalBench.PT"]["Weighted Average"] / stats["LegalBench.PT"]["Total Questions"] if stats["LegalBench.PT"]["Total Questions"] > 0 else 0.0
+        
+        os.makedirs(output_path, exist_ok=True)
+        out_file = os.path.join(output_path, file_name)
+        with open(out_file, 'w', encoding='utf-8') as f:
+            json.dump(stats, f, ensure_ascii=False, indent=4)
+
+        print(f"Scores saved for: {file_name}")
+
+
+def process(prediction, type):
+    if type in ["Multiple Choice", "Cloze Tasks", "Case Analysis Questions"]:
+        pattern = r'A resposta correta é:?\s*([A-Za-z])'
+        match = re.search(pattern, prediction)
+        if match:
+            guess = match.group(1)
+        else:
+            guess = ""
+        return guess
+    elif type == "True/False":
+        pattern = r'A afirmação é \s*(falsa|verdadeira)'
+        match = re.search(pattern, prediction)
+        if match:
+            guess = match.group(1).lower()
+        else:
+            guess = ""
+        if guess == "falsa":
+            guess = "Falso"
+        elif guess == "verdadeira":
+            guess = "Verdadeiro"
+        return guess
+    else:
+        return prediction
 
 
 def eval_matching_questions(target_answer, predicted_answer):
     pattern = re.compile(r'([a-zA-Z])\s*[-)]?\s*(\d)|(\d)\s*[-)]?\s*([a-zA-Z])')
     matches = pattern.findall(predicted_answer)
     guess = []
-    target_answer = ast.literal_eval(target_answer)   
+    target_answer = ast.literal_eval(target_answer)
     for match in matches:
         letter1, digit, digit2, letter2 = match
         if letter1 and digit:
@@ -107,7 +154,7 @@ def eval_matching_questions(target_answer, predicted_answer):
     guess = unique_list(guess)
     target_answer = sorted(target_answer)
     guess = sorted(guess)
-    f1_score += evaluate_f1(guess, target_answer)
+    f1_score = evaluate_f1(guess, target_answer)
     return f1_score
 
 
@@ -115,9 +162,10 @@ def eval_multiple_selection_questions(target_answer, predicted_answer):
     pattern = re.compile(r'[^A-Za-z]([A-Za-z])\)')
     guess = pattern.findall(predicted_answer)
     guess = list(set(guess))
+    target_answer = ast.literal_eval(target_answer)
     target_answer = sorted([i.lower() for i in target_answer])
     guess = sorted([i.lower() for i in guess])
-    f1_score += evaluate_f1(guess, target_answer)
+    f1_score = evaluate_f1(guess, target_answer)
     return f1_score
 
 
@@ -149,7 +197,6 @@ def eval_true_false(target_answer, predicted_answer):
         return 1
     else:
         return 0
-
 
 
 def delete_element(lst, number):
@@ -193,3 +240,13 @@ def unique_list(original_list):
             unique.append(i)
     return unique
 
+
+
+
+if __name__ == "__main__":
+    jsonargparse.CLI(
+        [evaluate_model_answers, 
+         compute_model_scores
+         ], 
+        as_positional=False,
+    )
