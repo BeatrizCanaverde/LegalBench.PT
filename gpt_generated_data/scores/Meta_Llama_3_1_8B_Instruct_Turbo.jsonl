@@ -1,0 +1,388 @@
+{
+    "Direito Administrativo": {
+        "Weighted Average": 146.1227878552607,
+        "Total Questions": 227,
+        "Case Analysis Questions": 0.6666666666666666,
+        "Cloze Tasks": 0.6732778091473743,
+        "Matching Questions": 0.644620811287478,
+        "Multiple Choice": 0.6047664141414141,
+        "Multiple Selection Questions": 0.8390804597701149,
+        "True/False": 0.558695652173913,
+        "Score": 0.6437127218293422
+    },
+    "Case Analysis Questions": {
+        "Weighted Average": 64.68333333333334,
+        "Total Questions": 89,
+        "Score": 0.7267790262172285
+    },
+    "Public": {
+        "Weighted Average": 1390.883859319271,
+        "Total Questions": 2115,
+        "Score": 0.6576283022786151
+    },
+    "LegalBench.PT": {
+        "Weighted Average": 3238.9303909260725,
+        "Total Questions": 4723,
+        "Score": 0.6857781899060073
+    },
+    "Cloze Tasks": {
+        "Weighted Average": 670.1560264667842,
+        "Total Questions": 983,
+        "Score": 0.6817457034250093
+    },
+    "Matching Questions": {
+        "Weighted Average": 354.96608946608944,
+        "Total Questions": 548,
+        "Score": 0.647748338441769
+    },
+    "Multiple Choice": {
+        "Weighted Average": 760.7432032243249,
+        "Total Questions": 1099,
+        "Score": 0.6922140156727251
+    },
+    "Multiple Selection Questions": {
+        "Weighted Average": 544.7590187590188,
+        "Total Questions": 695,
+        "Score": 0.7838259262719695
+    },
+    "True/False": {
+        "Weighted Average": 843.6227196765202,
+        "Total Questions": 1309,
+        "Score": 0.6444787774457755
+    },
+    "Direito Aéreo": {
+        "Weighted Average": 21.057142857142857,
+        "Total Questions": 31,
+        "Case Analysis Questions": 0.16666666666666666,
+        "Cloze Tasks": 0.7222222222222222,
+        "Multiple Choice": 0.5555555555555555,
+        "Multiple Selection Questions": 0.7447619047619047,
+        "True/False": 1.0,
+        "Score": 0.6792626728110599
+    },
+    "Private": {
+        "Weighted Average": 1420.4490270501653,
+        "Total Questions": 2057,
+        "Score": 0.6905440092611401
+    },
+    "Direito Bancário": {
+        "Weighted Average": 28.6,
+        "Total Questions": 30,
+        "Cloze Tasks": 1.0,
+        "Matching Questions": 0.6666666666666666,
+        "Multiple Choice": 1.0,
+        "Multiple Selection Questions": 0.9199999999999999,
+        "True/False": 1.0,
+        "Score": 0.9533333333333334
+    },
+    "Direito Comercial": {
+        "Weighted Average": 167.50092097445037,
+        "Total Questions": 240,
+        "Case Analysis Questions": 0.25,
+        "Cloze Tasks": 0.6542207792207793,
+        "Matching Questions": 0.6828431372549019,
+        "Multiple Choice": 0.7450534759358289,
+        "Multiple Selection Questions": 0.7919532627865961,
+        "True/False": 0.6726190476190476,
+        "Score": 0.6979205040602099
+    },
+    "Direito Constitucional": {
+        "Weighted Average": 139.13674347119297,
+        "Total Questions": 206,
+        "Case Analysis Questions": 0.95,
+        "Cloze Tasks": 0.6700854700854701,
+        "Matching Questions": 0.6435185185185186,
+        "Multiple Choice": 0.6739718614718614,
+        "Multiple Selection Questions": 0.7413690476190476,
+        "True/False": 0.6122019635343618,
+        "Score": 0.6754210848116163
+    },
+    "Direito Financeiro": {
+        "Weighted Average": 12.045454545454545,
+        "Total Questions": 16,
+        "Cloze Tasks": 1.0,
+        "Matching Questions": 0.34848484848484845,
+        "Multiple Choice": 0.75,
+        "True/False": 0.75,
+        "Score": 0.7528409090909091
+    },
+    "Direito Fiscal": {
+        "Weighted Average": 134.62250710758775,
+        "Total Questions": 232,
+        "Cloze Tasks": 0.5586805555555555,
+        "Matching Questions": 0.5718694885361552,
+        "Multiple Choice": 0.5706293706293706,
+        "Multiple Selection Questions": 0.7837837837837838,
+        "True/False": 0.49507168458781364,
+        "Score": 0.5802694271878782
+    },
+    "Direito Internacional Privado": {
+        "Weighted Average": 78.36814713064713,
+        "Total Questions": 110,
+        "Case Analysis Questions": 0.5,
+        "Cloze Tasks": 0.7261904761904762,
+        "Matching Questions": 0.6950549450549451,
+        "Multiple Choice": 0.8854166666666666,
+        "Multiple Selection Questions": 0.7794871794871795,
+        "True/False": 0.5491452991452992,
+        "Score": 0.7124377011877012
+    },
+    "Direito Internacional Público": {
+        "Weighted Average": 159.8588766788767,
+        "Total Questions": 212,
+        "Case Analysis Questions": 0.75,
+        "Cloze Tasks": 0.7833333333333333,
+        "Matching Questions": 0.577106227106227,
+        "Multiple Choice": 0.815620782726046,
+        "Multiple Selection Questions": 0.8186274509803921,
+        "True/False": 0.6827777777777778,
+        "Score": 0.7540513050890411
+    },
+    "Public Int.": {
+        "Weighted Average": 159.8588766788767,
+        "Total Questions": 212,
+        "Score": 0.7540513050890411
+    },
+    "Direito Marítimo": {
+        "Weighted Average": 5.5,
+        "Total Questions": 8,
+        "Case Analysis Questions": 0.5,
+        "Cloze Tasks": 0.0,
+        "Multiple Choice": 1.0,
+        "Multiple Selection Questions": 0.5,
+        "True/False": 1.0,
+        "Score": 0.6875
+    },
+    "Direito Penal": {
+        "Weighted Average": 243.5430984776093,
+        "Total Questions": 390,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.6406538208168643,
+        "Matching Questions": 0.6364468864468864,
+        "Multiple Choice": 0.6025641025641025,
+        "Multiple Selection Questions": 0.7007653061224489,
+        "True/False": 0.5793650793650793,
+        "Score": 0.6244694832759213
+    },
+    "Direito Processual Administrativo": {
+        "Weighted Average": 79.456162464986,
+        "Total Questions": 116,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.7,
+        "Matching Questions": 0.5902777777777778,
+        "Multiple Choice": 0.5892857142857143,
+        "Multiple Selection Questions": 0.746969696969697,
+        "True/False": 0.7191176470588235,
+        "Score": 0.6849669178016033
+    },
+    "Direito Processual Civil": {
+        "Weighted Average": 177.3100487499236,
+        "Total Questions": 272,
+        "Case Analysis Questions": 0.5,
+        "Cloze Tasks": 0.6619047619047619,
+        "Matching Questions": 0.6355042016806722,
+        "Multiple Choice": 0.6958333333333333,
+        "Multiple Selection Questions": 0.7608751608751608,
+        "True/False": 0.5702824133504493,
+        "Score": 0.6518751792276603
+    },
+    "Direito Processual Penal": {
+        "Weighted Average": 172.3889477837809,
+        "Total Questions": 274,
+        "Case Analysis Questions": 0.5,
+        "Cloze Tasks": 0.6738247863247864,
+        "Matching Questions": 0.5233193277310925,
+        "Multiple Choice": 0.6456140350877193,
+        "Multiple Selection Questions": 0.7677871148459383,
+        "True/False": 0.5765243902439025,
+        "Score": 0.6291567437364267
+    },
+    "Direito Processual do Trabalho": {
+        "Weighted Average": 1.0,
+        "Total Questions": 3,
+        "Case Analysis Questions": 0.0,
+        "Cloze Tasks": 1.0,
+        "True/False": 0.0,
+        "Score": 0.3333333333333333
+    },
+    "Direito da Concorrência": {
+        "Weighted Average": 153.89539011712924,
+        "Total Questions": 175,
+        "Cloze Tasks": 0.9115384615384615,
+        "Matching Questions": 0.7844611528822055,
+        "Multiple Choice": 0.9388111888111889,
+        "Multiple Selection Questions": 0.862202380952381,
+        "True/False": 0.8478260869565217,
+        "Score": 0.8794022292407385
+    },
+    "Public-Private": {
+        "Weighted Average": 153.89539011712924,
+        "Total Questions": 175,
+        "Score": 0.8794022292407385
+    },
+    "Direito da Energia": {
+        "Weighted Average": 15.025,
+        "Total Questions": 21,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 1.0,
+        "Multiple Choice": 0.5,
+        "Multiple Selection Questions": 0.8800000000000001,
+        "True/False": 0.375,
+        "Score": 0.7154761904761905
+    },
+    "Direito da Família": {
+        "Weighted Average": 141.52079725829728,
+        "Total Questions": 220,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.6493055555555556,
+        "Matching Questions": 0.556,
+        "Multiple Choice": 0.6630869130869131,
+        "Multiple Selection Questions": 0.7645833333333334,
+        "True/False": 0.546875,
+        "Score": 0.6432763511740786
+    },
+    "Direito da Insolvência": {
+        "Weighted Average": 27.28333333333333,
+        "Total Questions": 37,
+        "Cloze Tasks": 0.875,
+        "Matching Questions": 0.5833333333333334,
+        "Multiple Choice": 0.5833333333333334,
+        "Multiple Selection Questions": 0.7833333333333333,
+        "True/False": 0.8333333333333333,
+        "Score": 0.7373873873873873
+    },
+    "Direito da UE e Comunitário": {
+        "Weighted Average": 113.84323776062905,
+        "Total Questions": 164,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.5916666666666667,
+        "Matching Questions": 0.6062925170068026,
+        "Multiple Choice": 0.7224025974025974,
+        "Multiple Selection Questions": 0.8158730158730159,
+        "True/False": 0.6867954911433172,
+        "Score": 0.6941660839062747
+    },
+    "UE": {
+        "Weighted Average": 113.84323776062905,
+        "Total Questions": 164,
+        "Score": 0.6941660839062747
+    },
+    "Direito das Finanças Públicas": {
+        "Weighted Average": 152.3774541015699,
+        "Total Questions": 208,
+        "Case Analysis Questions": 0.6666666666666666,
+        "Cloze Tasks": 0.735684046345811,
+        "Matching Questions": 0.5864197530864198,
+        "Multiple Choice": 0.7637626262626263,
+        "Multiple Selection Questions": 0.7532312925170068,
+        "True/False": 0.7694508009153318,
+        "Score": 0.7325839139498552
+    },
+    "Direito das Obrigações": {
+        "Weighted Average": 133.29792637917637,
+        "Total Questions": 218,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.5180555555555556,
+        "Matching Questions": 0.7261337868480726,
+        "Multiple Choice": 0.5536057692307692,
+        "Multiple Selection Questions": 0.7894179894179894,
+        "True/False": 0.5974025974025974,
+        "Score": 0.6114583778861301
+    },
+    "Direito das Sociedades Comerciais": {
+        "Weighted Average": 104.60187169152687,
+        "Total Questions": 154,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.5741071428571428,
+        "Matching Questions": 0.6277777777777778,
+        "Multiple Choice": 0.594551282051282,
+        "Multiple Selection Questions": 0.7800054112554112,
+        "True/False": 0.7758620689655172,
+        "Score": 0.6792329330618627
+    },
+    "Direito das Sucessões": {
+        "Weighted Average": 9.67142857142857,
+        "Total Questions": 17,
+        "Cloze Tasks": 0.0,
+        "Matching Questions": 0.3428571428571429,
+        "Multiple Choice": 0.6666666666666666,
+        "Multiple Selection Questions": 0.8,
+        "True/False": 0.8333333333333333,
+        "Score": 0.5689075630252101
+    },
+    "Direito do Ambiente": {
+        "Weighted Average": 37.0797619047619,
+        "Total Questions": 52,
+        "Case Analysis Questions": 0.5,
+        "Cloze Tasks": 0.8125,
+        "Matching Questions": 0.6875,
+        "Multiple Choice": 0.6666666666666666,
+        "Multiple Selection Questions": 0.7722222222222221,
+        "True/False": 0.6785714285714286,
+        "Score": 0.7130723443223442
+    },
+    "Direito do Trabalho": {
+        "Weighted Average": 161.75698314230573,
+        "Total Questions": 207,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.8333333333333334,
+        "Matching Questions": 0.7660010240655403,
+        "Multiple Choice": 0.7409188034188033,
+        "Multiple Selection Questions": 0.8242703533026114,
+        "True/False": 0.7316129032258065,
+        "Score": 0.781434701170559
+    },
+    "Direito do Urbanismo": {
+        "Weighted Average": 80.77589285714285,
+        "Total Questions": 98,
+        "Cloze Tasks": 0.90625,
+        "Matching Questions": 0.8055555555555555,
+        "Multiple Choice": 0.8083333333333333,
+        "Multiple Selection Questions": 0.7702380952380953,
+        "True/False": 0.8125,
+        "Score": 0.8242438046647229
+    },
+    "Direito dos Contratos": {
+        "Weighted Average": 144.6260854383308,
+        "Total Questions": 212,
+        "Case Analysis Questions": 0.5,
+        "Cloze Tasks": 0.596185064935065,
+        "Matching Questions": 0.7993827160493827,
+        "Multiple Choice": 0.6971515326778485,
+        "Multiple Selection Questions": 0.8007440476190476,
+        "True/False": 0.619727047146402,
+        "Score": 0.6821985162185414
+    },
+    "Direito dos Transportes": {
+        "Weighted Average": 12.544444444444444,
+        "Total Questions": 26,
+        "Case Analysis Questions": 0.3333333333333333,
+        "Cloze Tasks": 0.5555555555555555,
+        "Multiple Choice": 0.4444444444444444,
+        "Multiple Selection Questions": 0.82,
+        "True/False": 0.2,
+        "Score": 0.4824786324786325
+    },
+    "Direito dos Valores Mobiliários": {
+        "Weighted Average": 34.69761904761905,
+        "Total Questions": 45,
+        "Case Analysis Questions": 1.0,
+        "Cloze Tasks": 0.5833333333333333,
+        "Matching Questions": 0.6333333333333333,
+        "Multiple Choice": 0.75,
+        "Multiple Selection Questions": 0.8645502645502645,
+        "True/False": 0.9166666666666667,
+        "Score": 0.7710582010582011
+    },
+    "Direitos Reais": {
+        "Weighted Average": 349.42232678146274,
+        "Total Questions": 502,
+        "Case Analysis Questions": 0.5,
+        "Cloze Tasks": 0.6741970991970991,
+        "Matching Questions": 0.6608585858585858,
+        "Multiple Choice": 0.7386499402628435,
+        "Multiple Selection Questions": 0.787823990355636,
+        "True/False": 0.6394523326572008,
+        "Score": 0.6960604119152645
+    }
+}

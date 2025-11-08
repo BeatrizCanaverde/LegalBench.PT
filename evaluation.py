@@ -3,9 +3,8 @@ import ast
 import os
 import json
 from collections import defaultdict
-from pathlib import Path
-import jsonargparse
 from sklearn.metrics import balanced_accuracy_score
+import jsonargparse
 from fields import fields_mapping, reverse_mapping
 
 
@@ -56,7 +55,6 @@ def evaluate_model_answers(input_path, output_path):
 
 
 def compute_model_scores(input_path, output_path):
-
     for file_name in os.listdir(input_path):
         if not file_name.lower().endswith(".jsonl"):
             continue
@@ -107,7 +105,6 @@ def compute_model_scores(input_path, output_path):
 
         stats["LegalBench.PT"]["Score"] = stats["LegalBench.PT"]["Weighted Average"] / stats["LegalBench.PT"]["Total Questions"] if stats["LegalBench.PT"]["Total Questions"] > 0 else 0.0
         
-        os.makedirs(output_path, exist_ok=True)
         out_file = os.path.join(output_path, file_name)
         with open(out_file, 'w', encoding='utf-8') as f:
             json.dump(stats, f, ensure_ascii=False, indent=4)
