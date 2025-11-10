@@ -11,10 +11,8 @@ def main(args):
     random.seed(args.seed)
 
     # Load the dataset
-    dataset = []
-    for field in fields:
-        ds = load_dataset("BeatrizCanaverde/LegalBench.PT", field.replace(" ", "_"), split="test")
-        dataset.extend(ds)
+    with open('data/legalbench_pt.jsonl', 'r', encoding='utf-8') as f:
+        dataset = [json.loads(line) for line in f]
 
     # Load the model and tokenizer
     model_path = args.model_path
