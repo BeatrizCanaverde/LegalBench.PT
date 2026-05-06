@@ -2,6 +2,7 @@
 
 LegalBench.PT is the first comprehensive legal benchmark specifically designed for the European Portuguese context. It assesses large language models' legal knowledge and reasoning abilities across key areas of the Portuguese law.
 
+📄 Paper: https://arxiv.org/abs/2502.16357
 
 ## About
 
@@ -77,6 +78,6 @@ Please cite the following paper if you use LegalBench.PT in your work:
       eprint={2502.16357},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2502.16357}, 
+      url={}, 
 }
 ```
