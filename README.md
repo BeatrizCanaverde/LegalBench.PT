@@ -66,6 +66,3 @@ python evaluation.py compute_model_scores \
     --output_path <folder_path_to_save_aggregated_scores>
 ```
 
-## License
-
-TBD
