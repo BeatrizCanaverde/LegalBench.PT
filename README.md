@@ -66,3 +66,17 @@ python evaluation.py compute_model_scores \
     --output_path <folder_path_to_save_aggregated_scores>
 ```
 
+## Citation
+
+Please cite the following paper if you use LegalBench.PT in your work:
+```bibtex
+@misc{canaverde2025legalbenchptbenchmarkportugueselaw,
+      title={LegalBench.PT: A Benchmark for Portuguese Law}, 
+      author={Beatriz Canaverde and Telmo Pessoa Pires and Leonor Melo Ribeiro and André F. T. Martins},
+      year={2025},
+      eprint={2502.16357},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2502.16357}, 
+}
+```
