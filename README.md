@@ -16,7 +16,7 @@ LegalBench.PT provides a rigorous evaluation framework that:
   - **Multiple Selection**: Multiple-choice questions where more than one option can be correct
   - **Matching Questions**: Require respondents to pair items from two columns
 
-The dataset will be available on Hugging Face: TBD
+The dataset is available on Hugging Face at: https://huggingface.co/datasets/BeatrizCanaverde/LegalBench.PT
 
 
 ## Installation
