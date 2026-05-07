@@ -3,6 +3,7 @@
 LegalBench.PT is the first comprehensive legal benchmark specifically designed for the European Portuguese context. It assesses large language models' legal knowledge and reasoning abilities across key areas of the Portuguese law.
 
 📄 Paper: https://arxiv.org/abs/2502.16357
+
 🤗 Dataset: https://huggingface.co/datasets/BeatrizCanaverde/LegalBench.PT
 
 ## About
